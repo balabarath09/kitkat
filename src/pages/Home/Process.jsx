@@ -58,42 +58,42 @@ const Process = () => {
 
     const processArray = [
         {
-            icon:null,
+            icon:"null",
             color:"",
             step:1,
             title:"Discovery",
             text:"Understanding your goals and requirements"
         },
         {
-            icon:null,
+            icon:"null",
             color:"",
             step:2,
             title:"Design",
             text:"Wiredframes & prototypes for your approval"
         },
         {
-            icon:null,
+            icon:"null",
             color:"",
             step:3,
             title:"Development",
             text:"Agile development with regular updates"
         },
         {
-            icon:null,
+            icon:"null",
             color:"",
             step:4,
             title:"Testing",
             text:"Regular testing for bug-free delivery"
         },
         {
-            icon:null,
+            icon:"null",
             color:"",
             step:5,
             title:"Launch",
             text:"Deploying your solution to the world"
         },
         {
-            icon:null,
+            icon:"null",
             color:"",
             step:6,
             title:"Support",
@@ -104,17 +104,24 @@ const Process = () => {
         <Box>
             <Grid container sx={{px:8}}>
                 <Grid size={7.5}>
-                    {
-                        processArray.map((item,index) => {
-                            const Icon = item.icon
+                    <Box sx={{display:"flex"}}>
+                        {
+                            processArray.map((item,index) => {
+                                const Icon = item.icon
 
-                            return(
-                                <Box>
-                                    
-                                </Box>
-                            )
-                        })
-                    }
+                                return(
+                                    <Box>
+                                        <Box>
+                                            <Icon/>
+                                        </Box>
+                                        <Typography>{item.step}</Typography>
+                                        <Typography>{item.title}</Typography>
+                                        <Typography>{item.text}</Typography>
+                                    </Box>
+                                )
+                            })
+                        }
+                    </Box>
                 </Grid>
                 <Grid size={4.5}>
                     <Box sx={{display:"flex",flexDirection:"column",gap:2}}>

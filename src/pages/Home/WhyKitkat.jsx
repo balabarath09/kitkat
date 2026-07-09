@@ -28,8 +28,8 @@ const WhyKitkat = () => {
         },
         {
             icon: GroupsOutlinedIcon,
-            Number: "24/7",
-            text: "Support & Maintenance",
+            Number: "15+",
+            text: "Expert Professionals",
         },
     ];
 
