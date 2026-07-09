@@ -10,6 +10,13 @@ import SchoolOutlinedIcon from '@mui/icons-material/SchoolOutlined';
 import LocalShippingOutlinedIcon from '@mui/icons-material/LocalShippingOutlined';
 import AccountBalanceWalletOutlinedIcon from '@mui/icons-material/AccountBalanceWalletOutlined';
 import AddchartOutlinedIcon from '@mui/icons-material/AddchartOutlined';
+import SearchIcon from '@mui/icons-material/Search';
+import CreateOutlinedIcon from '@mui/icons-material/CreateOutlined';
+import CodeOutlinedIcon from '@mui/icons-material/CodeOutlined';
+import VerifiedUserOutlinedIcon from '@mui/icons-material/VerifiedUserOutlined';
+import RocketLaunchOutlinedIcon from '@mui/icons-material/RocketLaunchOutlined';
+import HeadsetMicOutlinedIcon from '@mui/icons-material/HeadsetMicOutlined';
+import EastOutlinedIcon from '@mui/icons-material/EastOutlined';
 
 const Process = () => {
 
@@ -58,42 +65,42 @@ const Process = () => {
 
     const processArray = [
         {
-            icon:"null",
+            icon:SearchIcon,
             color:"",
             step:1,
             title:"Discovery",
             text:"Understanding your goals and requirements"
         },
         {
-            icon:"null",
-            color:"",
+            icon:CreateOutlinedIcon,
+            color:"#FE8240",
             step:2,
             title:"Design",
             text:"Wiredframes & prototypes for your approval"
         },
         {
-            icon:"null",
+            icon:CodeOutlinedIcon,
             color:"",
             step:3,
             title:"Development",
             text:"Agile development with regular updates"
         },
         {
-            icon:"null",
+            icon:VerifiedUserOutlinedIcon,
             color:"",
             step:4,
             title:"Testing",
             text:"Regular testing for bug-free delivery"
         },
         {
-            icon:"null",
+            icon:RocketLaunchOutlinedIcon,
             color:"",
             step:5,
             title:"Launch",
             text:"Deploying your solution to the world"
         },
         {
-            icon:"null",
+            icon:HeadsetMicOutlinedIcon,
             color:"",
             step:6,
             title:"Support",
@@ -101,29 +108,39 @@ const Process = () => {
         }
     ]
     return (
-        <Box>
+        <Box sx={{mt:4}}>
             <Grid container sx={{px:8}}>
-                <Grid size={7.5}>
-                    <Box sx={{display:"flex"}}>
+                <Grid size={8} sx={{px:3}}>
+                    <Box sx={{display:"flex",gap:1.5}}>
                         {
                             processArray.map((item,index) => {
                                 const Icon = item.icon
 
                                 return(
-                                    <Box>
-                                        <Box>
-                                            <Icon/>
+                                    <Box sx={{display:"flex"}}>
+
+                                        <Box sx={{display:"flex",flexDirection:"column",alignItems:"center",gap:1}}>
+                                            <Box sx={{display:"flex",justifyContent:"center",alignItems:"center",color:"white",backgroundColor:item.color,p:1.5,borderRadius:50}}>
+                                                <Icon/>
+                                            </Box>
+                                            <Typography sx={{textAlign:"center",fontSize:"14px",fontWeight:"600"}}>{item.step}</Typography>
+                                            <Typography sx={{textAlign:"center",fontSize:"14px",fontWeight:"600"}}>{item.title}</Typography>
+                                            <Typography sx={{textAlign:"center",fontSize:"13px"}}>{item.text}</Typography>
                                         </Box>
-                                        <Typography>{item.step}</Typography>
-                                        <Typography>{item.title}</Typography>
-                                        <Typography>{item.text}</Typography>
+                                        {
+                                            index !== processArray.length -1 && (
+                                                <EastOutlinedIcon sx={{mt:1.5}}/>
+                                            )
+                                        }
                                     </Box>
+                              
+                                   
                                 )
                             })
                         }
                     </Box>
                 </Grid>
-                <Grid size={4.5}>
+                <Grid size={4} sx={{px:3}}>
                     <Box sx={{display:"flex",flexDirection:"column",gap:2}}>
                         <Typography component={"h1"} variant='h6' sx={{fontWeight:600}}>Industries We Serve</Typography>
                         <Box>
