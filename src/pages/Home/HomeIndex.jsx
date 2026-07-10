@@ -6,6 +6,9 @@ import CoreServices from './CoreServices';
 import WhyKitkat from './WhyKitkat';
 import ItSolution from './ItSolution';
 import Process from './Process';
+import Training from './Training';
+import Review from './Review';
+import Faq from './Faq';
 
 const HomeIndex = () => {
     return (
@@ -16,6 +19,9 @@ const HomeIndex = () => {
             <WhyKitkat/>
             <ItSolution/>
             <Process/>
+            <Training/>
+            <Review/>
+            <Faq/>
         </Box>
     );
 }

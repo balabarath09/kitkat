@@ -66,42 +66,42 @@ const Process = () => {
     const processArray = [
         {
             icon:SearchIcon,
-            color:"",
+            color:"#055DD8",
             step:1,
             title:"Discovery",
             text:"Understanding your goals and requirements"
         },
         {
             icon:CreateOutlinedIcon,
-            color:"#FE8240",
+            color:"#5EA936",
             step:2,
             title:"Design",
             text:"Wiredframes & prototypes for your approval"
         },
         {
             icon:CodeOutlinedIcon,
-            color:"",
+          color:"#FE8240",
             step:3,
             title:"Development",
             text:"Agile development with regular updates"
         },
         {
             icon:VerifiedUserOutlinedIcon,
-            color:"",
+            color:"#6851D8",
             step:4,
             title:"Testing",
             text:"Regular testing for bug-free delivery"
         },
         {
             icon:RocketLaunchOutlinedIcon,
-            color:"",
+            color:"#07419E",
             step:5,
             title:"Launch",
             text:"Deploying your solution to the world"
         },
         {
             icon:HeadsetMicOutlinedIcon,
-            color:"",
+            color:"#25A59E",
             step:6,
             title:"Support",
             text:"Ongoing support & continuos improvement"
@@ -110,14 +110,14 @@ const Process = () => {
     return (
         <Box sx={{mt:4}}>
             <Grid container sx={{px:8}}>
-                <Grid size={8} sx={{px:3}}>
-                    <Box sx={{display:"flex",gap:1.5}}>
+                <Grid size={8} sx={{ps:3,pt:3,borderTop:"1px solid #EBF0F3",borderRight:"1px solid #EBF0F3"}}>
+                    <Box sx={{display:"flex"}}>
                         {
                             processArray.map((item,index) => {
                                 const Icon = item.icon
 
                                 return(
-                                    <Box sx={{display:"flex"}}>
+                                    <Box sx={{display:"flex"}} key={index}>
 
                                         <Box sx={{display:"flex",flexDirection:"column",alignItems:"center",gap:1}}>
                                             <Box sx={{display:"flex",justifyContent:"center",alignItems:"center",color:"white",backgroundColor:item.color,p:1.5,borderRadius:50}}>
@@ -128,8 +128,13 @@ const Process = () => {
                                             <Typography sx={{textAlign:"center",fontSize:"13px"}}>{item.text}</Typography>
                                         </Box>
                                         {
-                                            index !== processArray.length -1 && (
-                                                <EastOutlinedIcon sx={{mt:1.5}}/>
+                                            index !== processArray.length && (
+                                                <EastOutlinedIcon
+                                                    sx={{
+                                                        mt: 1.5,
+                                                        visibility: index === processArray.length - 1 ? "hidden" : "visible"
+                                                    }}
+                                                    />
                                             )
                                         }
                                     </Box>
@@ -140,7 +145,7 @@ const Process = () => {
                         }
                     </Box>
                 </Grid>
-                <Grid size={4} sx={{px:3}}>
+                <Grid size={4} sx={{px:3,pt:3,borderTop:"1px solid #EBF0F3"}}>
                     <Box sx={{display:"flex",flexDirection:"column",gap:2}}>
                         <Typography component={"h1"} variant='h6' sx={{fontWeight:600}}>Industries We Serve</Typography>
                         <Box>

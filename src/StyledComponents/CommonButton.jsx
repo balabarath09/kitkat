@@ -16,6 +16,7 @@ export const CommonButton = styled(Button)(({ variant }) => ({
   ...(variant === "contained" && {
     backgroundColor: "#0749C4",
     color: "#fff",
+    zIndex:0,
     "&:hover": {
       backgroundColor: "#063a9d",
     },

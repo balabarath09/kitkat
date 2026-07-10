@@ -3,3 +3,13 @@
     padding: 0;
     box-sizing: border-box;
 }
+.container {
+  background-image: url("./assets/Images/TrainingBanner.png");
+  background-repeat: no-repeat;
+  background-size: 100% 35vh;
+}
+.hero-container {
+  background-image: url("./assets/Images/HomeBanner.png");
+  background-repeat: no-repeat;
+  background-size: 100% 90vh;
+}

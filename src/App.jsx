@@ -3,6 +3,7 @@ import './App.css'
 import Box from '@mui/material/Box';
 import Navbar from './components/Navbar';
 import HomeIndex from './pages/Home/HomeIndex';
+import Footer from './components/Footer';
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<HomeIndex/>}/>
       </Routes>
     </Box>
+    <Footer/>
     </>
   )
 }

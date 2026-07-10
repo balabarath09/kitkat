@@ -4,14 +4,15 @@ import Typography from '@mui/material/Typography';
 import React from 'react';
 import CallIcon from '@mui/icons-material/Call';
 import KitKatLogo from "../assets/Images/KitKatLogo.png"
+// import KitKatLogo from "../assets/Images/KitKatLogo.jpg"
 import { CommonButton } from '../StyledComponents/CommonButton';
 import CustomizedMenus from '../StyledComponents/Dropdown';
 
 const Navbar = () => {
     return (
         <>
-        <Box sx={{display:"flex",justifyContent:"space-between",alignItems:"center",px:3,py:2,height:"10vh"}}>
-            <Box component={"img"} src={KitKatLogo}  sx={{height:"50px"}}/>
+        <Box sx={{boxShadow:"0px 2px 5px",zIndex:1,display:"flex",justifyContent:"space-between",alignItems:"center",px:3,py:2,height:"10vh",position:"sticky",top:0,backgroundColor:"white"}}>
+            <Box component={"img"} src={KitKatLogo}  sx={{height:"50px",width:"200px"}}/>
             <Box sx={{display:"flex",gap:"10px",alignItems:"center"}}>
                     <Typography>Home</Typography>
                     <Typography>About Us</Typography>
