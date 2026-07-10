@@ -15,12 +15,12 @@ const Navbar = () => {
             <Box component={"img"} src={KitKatLogo}  sx={{height:"50px",width:"200px"}}/>
             <Box sx={{display:"flex",gap:"10px",alignItems:"center"}}>
                     <Typography>Home</Typography>
-                    <Typography>About Us</Typography>
-                    {/* <Typography>Services</Typography> */}
-                    <CustomizedMenus/>
+                    <Typography>Services</Typography>
+                    {/* <CustomizedMenus/> */}
                     <Typography>Training</Typography>
-                    <Typography>Portfolio</Typography>
+                    <Typography>Products</Typography>
                     <Typography>Blog</Typography>
+                    <Typography>About Us</Typography>
                     <Typography>Contact Us</Typography>
             </Box>
             <Box sx={{display:"flex",alignItems:"center",gap:"10px"}}>

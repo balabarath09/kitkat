@@ -33,10 +33,10 @@ const Hero = () => {
         // <Box sx={{height:"90vh"}}>
         //     <Box component={'img'} src={HomeBanner} sx={{width:"100%",height:"100%"}}/>
         // </Box>
-                <Box className="hero-container" component={'div'} sx={{height:"90vh",display:"flex",flexDirection:"column",justifyContent:"center",gap:10}}>
+                <Box className="hero-container" component={'div'} sx={{height:"80vh",display:"flex",flexDirection:"column",justifyContent:"space-between",pb:2,pt:10}}>
                     <Box sx={{width:"45vw",display:"flex",flexDirection:"column",justifyContent:"space-between",px:2,gap:5}}>
                         <Box sx={{display:"flex",flexDirection:"column",gap:2}}>
-                            <Typography component={"h1"} variant="h4" sx={{fontWeight:900}}>Best Software Development  Company in <span style={{color:"#FD7A25"}}>Coimbatore</span></Typography>
+                            <Typography component={"h1"} variant="h3" sx={{fontWeight:900}}>Best Software Development  Company in <span style={{color:"#FD7A25"}}>Coimbatore</span></Typography>
                             <Typography component={"p"} variant="p" >We build websites ,mobile apps and custom software thathelp business grow,automate and scale.</Typography>
                         </Box>
                         <Box sx={{display:"flex",justifyContent:"space-between",gap:2}}>
@@ -58,7 +58,7 @@ const Hero = () => {
                         </Box>
                         <Box sx={{display:"flex",gap:3}}>
                             <CommonButton variant='contained' endIcon={<EastOutlinedIcon/>}>Get a Free Consultation</CommonButton>
-                            <CommonButton sx={{color:"green"}} variant='outlined' startIcon={<WhatsAppIcon/> }>Chat on Whatsapp</CommonButton>
+                            <CommonButton sx={{color:"green",p:1.5,borderRadius:"10px"}} variant='outlined' startIcon={<WhatsAppIcon/> }>Chat on Whatsapp</CommonButton>
                         </Box>
                     </Box>
                     <Box sx={{display:"flex",justifyContent:"end",px:10}}>
