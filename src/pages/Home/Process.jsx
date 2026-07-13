@@ -17,6 +17,7 @@ import VerifiedUserOutlinedIcon from '@mui/icons-material/VerifiedUserOutlined';
 import RocketLaunchOutlinedIcon from '@mui/icons-material/RocketLaunchOutlined';
 import HeadsetMicOutlinedIcon from '@mui/icons-material/HeadsetMicOutlined';
 import EastOutlinedIcon from '@mui/icons-material/EastOutlined';
+import SouthIcon from '@mui/icons-material/South';
 
 const Process = () => {
 
@@ -109,47 +110,55 @@ const Process = () => {
     ]
     return (
         <Box sx={{mt:4}}>
-            <Grid container sx={{px:8}}>
-                <Grid size={8} sx={{ps:3,pt:3,borderTop:"1px solid #EBF0F3",borderRight:"1px solid #EBF0F3"}}>
-                    <Box sx={{display:"flex"}}>
+            <Grid container sx={{px:{xs:1,lg:8}}}>
+                <Grid size={{xs:12,lg:8}} sx={{display:"flex",justifyContent:"center",ps:3,pt:3,borderTop:"1px solid #EBF0F3",borderRight:"1px solid #EBF0F3"}}>
+                    <Box sx={{display:"flex",flexDirection:{xs:"column",md:"row"}}}>
                         {
                             processArray.map((item,index) => {
                                 const Icon = item.icon
 
                                 return(
-                                    <Box sx={{display:"flex"}} key={index}>
-
-                                        <Box sx={{display:"flex",flexDirection:"column",alignItems:"center",gap:1}}>
+                                    <Box sx={{display:"flex",justifyContent:"center",mt:{xs:1,md:0}}} key={index}>
+                                        <Box sx={{display:"flex",flexDirection:"column",alignItems:"center",gap:{xs:0.5,lg:1}}}>
                                             <Box sx={{display:"flex",justifyContent:"center",alignItems:"center",color:"white",backgroundColor:item.color,p:1.5,borderRadius:50}}>
                                                 <Icon/>
                                             </Box>
                                             <Typography sx={{textAlign:"center",fontSize:"14px",fontWeight:"600"}}>{item.step}</Typography>
                                             <Typography sx={{textAlign:"center",fontSize:"14px",fontWeight:"600"}}>{item.title}</Typography>
                                             <Typography sx={{textAlign:"center",fontSize:"13px"}}>{item.text}</Typography>
+                                        {
+                                            index !== processArray.length && (
+                                                <SouthIcon
+                                                    sx={{
+                                                        display:{md:"none"},
+                                                        visibility: index === processArray.length - 1 ? "hidden" : "visible"
+                                                    }}
+                                                    />
+                                            )
+                                        }
                                         </Box>
                                         {
                                             index !== processArray.length && (
                                                 <EastOutlinedIcon
                                                     sx={{
+                                                        display:{xs:"none",md:"block"},
                                                         mt: 1.5,
                                                         visibility: index === processArray.length - 1 ? "hidden" : "visible"
                                                     }}
                                                     />
                                             )
                                         }
-                                    </Box>
-                              
-                                   
+                                    </Box> 
                                 )
                             })
                         }
                     </Box>
                 </Grid>
-                <Grid size={4} sx={{px:3,pt:3,borderTop:"1px solid #EBF0F3"}}>
+                <Grid size={{xs:12,lg:4}} sx={{px:{xs:0,lg:3},pt:3,borderTop:"1px solid #EBF0F3"}}>
                     <Box sx={{display:"flex",flexDirection:"column",gap:2}}>
-                        <Typography component={"h1"} variant='h6' sx={{fontWeight:600}}>Industries We Serve</Typography>
-                        <Box>
-                            <Grid container spacing={1}>
+                        <Typography component={"h1"} variant='h6' sx={{fontWeight:600,textAlign:{xs:"center",lg:"start"}}}>Industries We Serve</Typography>
+                        <Box sx={{width:{xs:"100%",sm:"75%",md:"50%",lg:"100%"},m:"auto"}}>
+                            <Grid container spacing={1}  sx={{border:{xs:"2px solid #EBF0F3",lg:0},p:{xs:2,lg:0},borderRadius:{xs:2,lg:0}}}>
                                 {
                                     serviceArray.map((item,index) => {
                                         const Icon = item.icon
@@ -157,8 +166,8 @@ const Process = () => {
                                         return (
                                             <Grid size={6} key={index}>
                                                 <Box sx={{display:"flex",alignItems:"center",gap:1.5}}>
-                                                    <Icon sx={{fontSize:"28px",color:item.color}}/>
-                                                    <Typography sx={{fontSize:"12px"}}>{item.text}</Typography>
+                                                    <Icon sx={{fontSize:"1.7rem",color:item.color}}/>
+                                                    <Typography sx={{fontSize:"0.6rem"}}>{item.text}</Typography>
                                                 </Box>
                                             </Grid>
                                         )

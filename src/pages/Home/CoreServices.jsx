@@ -59,17 +59,17 @@ const CoreServices = () => {
     return (
         <Box sx={{display:"flex",flexDirection:"column",alignItems:"center",gap:2,mt:2}}>
             <Box sx={{display:"flex",flexDirection:"column",alignItems:"center"}}>
-                <Typography>Our Core Services</Typography>
+                <Typography sx={{fontWeight:600}}>Our Core Services</Typography>
                 <Box component={"div"} sx={{width:"35px",height:"2px",backgroundColor:"#0749C4"}}></Box>
             </Box>
-            <Grid container sx={{px:8}} spacing={2} >
+            <Grid container sx={{px:{xs:1,lg:8}}} spacing={2} >
                 {
                     cardArray.map((item,index) => {
 
                         const Icon = item.icon
 
                         return(
-                            <Grid size={2} key={index}>
+                            <Grid size={{xs:6,sm:4,nd:3,lg:2}} key={index}>
                                 <Card sx={{height:"100%"}}>
                                     <CardContent sx={{height:"100%"}}>
                                         <Box sx={{height:"100%",display:"flex",flexDirection:"column",alignItems:"center",gap:2}}>

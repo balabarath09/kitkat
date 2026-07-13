@@ -43,8 +43,8 @@ const WhyKitkat = () => {
 
     return (
         <Box sx={{backgroundColor:"#F8FBFE",mt:2,py:2}}>
-            <Grid container sx={{px:8}} spacing={1} >
-                <Grid size={5} sx={{height:"100"}} >
+            <Grid container sx={{px:{xs:1,lg:8}}} spacing={1} >
+                <Grid size={{xs:12,md:6,nd:5}} sx={{height:"100"}} >
                     <Box sx={{display:"flex",flexDirection:"column",justifyContent:"space-between",height:"100%"}}>
                         <Typography component={'p'} variant='p' sx={{color:"#F77230"}}>WHY CHOOSE KITKAT?</Typography>
                         <Typography component={"h1"} variant='h4'>Why We Are The Best IT Company in <Box sx={{color:"#0749C4"}} component={"span"}>Coimbatore</Box></Typography>
@@ -63,28 +63,30 @@ const WhyKitkat = () => {
                         </Box>
                     </Box>
                 </Grid>
-                <Grid size={4.5} sx={{p:1}}>
+                <Grid size={{xs:12,md:6,nd:4.5}} sx={{p:1}}>
                     <Box component={'img'} src={GroupImg} sx={{width:"100%",height:"100%",borderRadius:2}}/>
                 </Grid>
-                <Grid size={2.5} sx={{backgroundColor:"#042F60",borderRadius:2}}>
-                    <Box sx={{height:"100%",display:"flex",flexDirection:"column",justifyContent:"space-between",px:2,py:2}}>
+                <Grid size={{xs:12,nd:2.5}} sx={{backgroundColor:"#042F60",borderRadius:2}}>
+                    <Grid container spacing={1} sx={{p:1,height:"100%"}}>
                         {infoArray.map((item, index) => {
                             const Icon = item.icon;
 
                             return (
-                                <Box key={index} sx={{display:"flex",alignItems:"center",gap:2,color:"white",flexGrow:1,borderRight:item.borderRight ? "2px solid white" : ""}}>
-                                    <Box>
-                                        <Icon />
-                                    </Box>
+                                <Grid size={{xs:6,md:3,nd:12}} key={index} sx={{display:"flex",flexDirection:"column",justifyContent:"space-between"}} >
+                                    <Box sx={{height:"100%",display:"flex",alignItems:'center',gap:2,color:"white"}}>
+                                        <Box>
+                                            <Icon />
+                                        </Box>
 
-                                    <Box>
-                                        <Typography sx={{color:"#FC8B11"}}>{item.Number}</Typography>
-                                        <Typography>{item.text}</Typography>
+                                        <Box>
+                                            <Typography sx={{color:"#FC8B11"}}>{item.Number}</Typography>
+                                            <Typography>{item.text}</Typography>
+                                        </Box>
                                     </Box>
-                                </Box>
+                                </Grid>
                             );
                         })}
-                    </Box>
+                    </Grid>
                 </Grid>
             </Grid>
         </Box>

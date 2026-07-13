@@ -110,16 +110,16 @@ const ItSolution = () => {
     return (
         <Box sx={{display:"flex",flexDirection:"column",alignItems:"center",gap:2,mt:2}}>
             <Box sx={{display:"flex",flexDirection:"column",alignItems:"center"}}>
-                <Typography>Our Core Services</Typography>
+                <Typography sx={{fontWeight:600}}>Our Core Services</Typography>
                 <Box component={"div"} sx={{width:"35px",height:"2px",backgroundColor:"#0749C4"}}></Box>
             </Box>
-            <Grid container spacing={2} sx={{px:8}}>
+            <Grid container spacing={2} sx={{px:{xs:1,lg:8}}}>
                 {
                     solutionArray.map((item,index) => {
                         const Icon = item.icon
 
                         return (
-                            <Grid key={index} size={1.5}>
+                            <Grid key={index} size={{xs:6,sm:4,md:3,nd:2,lg:1.5}}>
                                 <Card sx={{height:"100%"}}>
                                     <CardContent>
                                         <Box sx={{display:"flex",flexDirection:"column",alignItems:"center",gap:1}}>
