@@ -25,11 +25,11 @@ const Faq = () => {
                 <Box component={"div"} sx={{width:"75px",height:"2px",backgroundColor:"#0749C4"}}></Box>
             </Box>
             <Box>
-                <Grid container sx={{px:8}} spacing={2}>
+                <Grid container sx={{px:{xs:1,lg:8}}} spacing={2}>
                     {
                         array.map((item,index) => {
                             return (
-                                    <Grid size={4} key={index}>
+                                    <Grid size={{xs:12,sm:6,lg:4}} key={index}>
                                         <Accordion sx={{boxShadow:"0"}} expanded={expanded === item} onChange={handleChange(item)}>
                                             <AccordionSummary sx={{borderRadius:2,border:"2px solid #EBF0F3",}}
                                             expandIcon={expanded === item  ? <RemoveIcon /> : <AddIcon />}

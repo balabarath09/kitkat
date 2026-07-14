@@ -20,8 +20,8 @@ const HomeIndex = () => {
             <ItSolution/>
             <Process/>
             <Training/>
-            {/* <Review/>
-            <Faq/> */}
+            <Review/>
+            <Faq/>
         </Box>
     );
 }

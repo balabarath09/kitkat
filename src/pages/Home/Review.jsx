@@ -54,8 +54,8 @@ const reviewData = [
         const logoArray = [Logo1,Logo2,Logo3,Logo4,Logo5,Logo6]
     return (
         <Box sx={{mt:4}}>
-            <Grid container sx={{px:8}}>
-                <Grid size={4} sx={{display:"flex",flexDirection:"column",gap:2,px:4}}>
+            <Grid container sx={{px:{lg:8},display:"flex",justifyContent:"center"}}>
+                <Grid size={{xs:12,sm:6,lg:4}} sx={{display:"flex",flexDirection:"column",gap:2,px:4}}>
                     <Box sx={{display:"flex",flexDirection:"column",alignItems:"center"}}>
                         <Typography sx={{fontWeight:800}}>What Our Clients Say</Typography>
                         <Box component={"div"} sx={{width:"35px",height:"2px",backgroundColor:"#0749C4"}}></Box>
@@ -100,7 +100,7 @@ const reviewData = [
                                 }
                         </Swiper>
                 </Grid>
-                <Grid size={3} sx={{p:3,borderLeft:"1px solid #EBF0F3",borderRight:"1px solid #EBF0F3"}}>
+                <Grid size={{xs:12,sm:6,lg:3}} sx={{p:3,borderLeft:"1px solid #EBF0F3",borderRight:"1px solid #EBF0F3"}}>
                     <Box sx={{display:"flex",flexDirection:"column",justifyContent:"space-between",height:"100%"}}>
                         <Box sx={{display:"flex",alignItems:"center"}}>
                             <ShoppingBagIcon sx={{color:"#0749C4"}}/>
@@ -115,7 +115,7 @@ const reviewData = [
                         <Box></Box>
                     </Box>
                 </Grid>
-                <Grid size={5} sx={{display:"flex",flexDirection:"column"}}>
+                <Grid size={{xs:12,sm:8,lg:5}} sx={{display:"flex",flexDirection:"column"}}>
                     <Box sx={{display:"flex",flexDirection:"column",alignItems:"center"}}>
                         <Typography sx={{fontWeight:800}}>Our Clients</Typography>
                         <Box component={"div"} sx={{width:"35px",height:"2px",backgroundColor:"#0749C4"}}></Box>
