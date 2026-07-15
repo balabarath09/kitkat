@@ -5,6 +5,10 @@ import Info from './Info';
 import WhyKitkat from './WhyKitkat';
 import Services from './Services';
 import Process from './Process';
+import HeroTwo from './HeroTwo';
+import Pricing from './Pricing';
+import Faq from './Faq';
+import Technology from './Technology';
 
 const WebAppIndex = () => {
     return (
@@ -14,6 +18,10 @@ const WebAppIndex = () => {
             <WhyKitkat/>
             <Services/>
             <Process/>
+            <Technology/>
+            <HeroTwo/>
+            <Pricing/>
+            <Faq/>
         </Box>
     );
 }
