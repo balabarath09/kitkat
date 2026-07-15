@@ -43,9 +43,9 @@ const HeroTwo = () => {
         <Box sx={{mt:4,px:{xs:1,lg:8}}}>
             <Grid container spacing={1}>
                 <Grid size={{xs:12,lg:3}} sx={{borderRadius:2}}>
-                    <Box sx={{display:"flex",flexDirection:"column",gap:2,backgroundColor:"#F5F4F6",p:3,borderRadius:2}}>
+                    <Box sx={{display:"flex",flexDirection:"column",justifyContent:"center",gap:2,backgroundColor:"#F5F4F6",p:3,borderRadius:2,height:"100%"}}>
                         <Typography component={"h1"} variant='h6' sx={{fontWeight:600,textAlign:{xs:"center",lg:"start"}}}>Industries We Serve</Typography>
-                        <Box sx={{width:{xs:"100%",sm:"75%",md:"50%",lg:"100%"},m:"auto"}}>
+                        <Box >
                             <Grid container spacing={1}  sx={{border:{xs:"2px solid #EBF0F3",lg:0},p:{xs:2,lg:0},borderRadius:{xs:2,lg:0}}}>
                                 {
                                     serviceArray.map((item,index) => {

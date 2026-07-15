@@ -8,6 +8,7 @@ import Index from './pages/Services/WebsiteDesignAndDevelopment/Index';
 import AboutIndex from './pages/About/AboutIndex';
 import Contact from './pages/Contact/Contact';
 import WebAppIndex from './pages/Services/WebApplication/WebAppIndex';
+import CustomIndex from './pages/Services/CustomizeApplication/customIndex';
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
         {/* service pages */}
         <Route path='/services/web-design' element={<Index/>}/>
         <Route path='/services/web-app' element={<WebAppIndex/>}/>
+        <Route path='/services/custom-app' element={<CustomIndex/>}/>
 
         <Route path='/aboutus' element={<AboutIndex/>}/>
         <Route path='/contactus' element={<Contact/>}/>

@@ -81,7 +81,7 @@ const Hero = () => {
                                     trainingArray.map((item,index) => {
                                         const Icon = item.icon
                                         return (
-                                            <Grid size={{xs:item.xs,sm:item.sm,lg:item.nd}} sx={{display:"flex",justifyContent:{sm:item.jss,md:item.jsm === true ? "center" : "start",lg:"start"},borderRight:{sm:item.borderRight && "2px solid black",lg:"none"}}}>
+                                            <Grid size={{xs:item.xs,lg:item.nd}} sx={{display:"flex"}}>
                                                 <Box sx={{width:{},display:"flex",gap:1,alignItems:"center",px:{sm:1.5,md:0}}}>
                                                     <Icon sx={{fontSize:{xs:"1rem",sm:"1.5rem",lg:"1rem"}}}/>
                                                     <Box sx={{display:"flex",flexDirection:"column"}}>

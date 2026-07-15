@@ -8,7 +8,7 @@ import EastOutlinedIcon from "@mui/icons-material/EastOutlined";
 import ImportantDevicesOutlinedIcon from '@mui/icons-material/ImportantDevicesOutlined';
 import GppGoodOutlinedIcon from '@mui/icons-material/GppGoodOutlined';
 import StarIcon from "@mui/icons-material/Star";
-import ServiceHero from "../../../assets/Images/ServiceHero.png";
+import CustomHero from "../../../assets/Images/CustomHero.png";
 import { CommonButton } from "../../../StyledComponents/CommonButton";
 import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
@@ -17,7 +17,7 @@ const Hero = () => {
     {
       icon: SentimentSatisfiedAltOutlinedIcon,
       number:"150+",
-      text: "Projects Delivered",
+      text: "Tailored Solutions",
       color: "#055DD8",
       borderRight:true,
       jsx:"end",
@@ -30,7 +30,7 @@ const Hero = () => {
     {
       icon: Groups2OutlinedIcon,
       number:"10+",
-      text: "Years of Experience",
+      text: "Scalable & Secure",
       color: "#FE8240",
       borderRight:false,
       jsx:"end",
@@ -43,7 +43,7 @@ const Hero = () => {
     {
       icon: BusinessCenterOutlinedIcon,
       number:"30+",
-      text: "Expert Developers",
+      text: "On-time Delivery",
       color: "#5EA936",
       borderRight:false,
       jss:"start",
@@ -55,8 +55,8 @@ const Hero = () => {
     {
       icon: GppGoodOutlinedIcon,
       number:"98%",
-      text: "Client Retention",
-      color: "#FE8240",
+      text: "Ongoing Support",
+      color: "#0b0908",
       borderRight:false,
       jss:"center",
       jsm:true,
@@ -73,15 +73,15 @@ const Hero = () => {
                     <Box sx={{height:"100%",display:"flex",flexDirection:"column"}}>
                         <Box sx={{display:"flex",flexDirection:"column",justifyContent:"space-evenly",flexGrow:1,p:{xs:2,lg:1},pl:{xs:2,lg:6},gap:{xs:2,lg:0}}}>
                             <Box sx={{display:"flex",flexDirection:"column",gap:2}}>
-                                <Typography component={'h1'} variant="h3" sx={{fontSize:{lg:"2.5rem"},fontWeight:"600"}}>Website Design and Web Development Company In Coimbatore</Typography>
-                                <Typography >We design beautifu,responsive websites and build powerful,SEO-ready solutions that help your business grow online.</Typography>
+                                <Typography component={'h1'} variant="h3" sx={{fontSize:{lg:"2.5rem"},fontWeight:"600"}}>Custom Software <Box component={'span'} sx={{color:"#FD7A25"}}>Development Company</Box> In Coimbatore</Typography>
+                                <Typography >We build scalable, secure and high-performance custom software that streamlines your operations and drives real business growth.Bespoke solutions. Built around your business.</Typography>
                             </Box>
                             <Grid container spacing={1}>
                                 {
                                     trainingArray.map((item,index) => {
                                         const Icon = item.icon
                                         return (
-                                            <Grid size={{xs:item.xs,lg:item.nd}} sx={{display:"flex",}}>
+                                            <Grid key={index} size={{xs:item.xs,lg:item.nd}} sx={{display:"flex",}}>
                                                 <Box sx={{width:{},display:"flex",gap:1,alignItems:"center",px:{sm:1.5,md:0}}}>
                                                     <Icon sx={{fontSize:{xs:"1rem",sm:"1.5rem",lg:"1rem"}}}/>
                                                     <Box sx={{display:"flex",flexDirection:"column"}}>
@@ -95,15 +95,15 @@ const Hero = () => {
                                 }
                             </Grid>
                             <Box sx={{display:"flex",gap:3}}>
-                                <CommonButton endIcon={<EastOutlinedIcon/>} variant="contained" sx={{fontSize:"0.63rem"}}>Request a Free Consultation</CommonButton>
-                                <CommonButton startIcon={<ImportantDevicesOutlinedIcon/>} variant="outlined" sx={{fontSize:"0.63rem"}}>View Our Work</CommonButton>
+                                <CommonButton endIcon={<EastOutlinedIcon/>} variant="contained" sx={{fontSize:"0.51rem"}}>Request a Free Consultation</CommonButton>
+                                <CommonButton startIcon={<ImportantDevicesOutlinedIcon/>} variant="outlined" sx={{fontSize:"0.55rem"}}>View Our Case Studies</CommonButton>
                             </Box>
                         </Box>
                     </Box>
                 </Grid>
                 <Grid size={{ xs: 12, md: 7 }}>
                     <Box sx={{position: "relative",width: "100%",height: "100%",overflow: "hidden", }}>
-                        <Box component="img" src={ServiceHero} sx={{width: "100%",height: "100%",objectFit: "cover",display: "block", }}/>
+                        <Box component="img" src={CustomHero} sx={{width: "100%",height: "100%",objectFit: "cover",display: "block", }}/>
 
                         {/* Fade Effect */}
                         <Box sx={{position: "absolute",top: 0,left: 0, 
